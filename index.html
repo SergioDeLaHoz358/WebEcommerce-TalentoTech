@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,52 +16,21 @@
             },
         };
     </script>
+
+    <script src="/assets/js/header.js" defer></script>
+    <script src="/assets/js/footer.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () =>
+        {
+            loadHeader();
+            loadFooter();
+        });
+    </script>
 </head>
 
+
 <body>
-
-    <!-- Encabezado -->
-    <nav class="bg-yellow-600 text-white shadow-xl">
-        <div class="container mx-auto flex justify-between py-2">
-            <div>
-                <i className="fas fa-envelope mx-2"></i>
-                <a href="mailto:info@prodart.com" class="text-white hover:underline">info@prodart.com</a>
-                <i class="fas fa-phone mx-2"></i>
-                <a href="tel:057-320-202-02-02" class="text-white hover:underline">057-320-202-02-02</a>
-            </div>
-            <div>
-                <a href="https://fb.com/templatemo" target="_blank" rel="sponsored" class="mx-2"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/" target="_blank" class="mx-2"><i class="fab fa-instagram"></i></a>
-                <a href="https://twitter.com/" target="_blank" class="mx-2"><i class="fab fa-twitter"></i></a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Menú -->
-    <nav class="bg-white shadow">
-        <div class="container mx-auto flex items-center justify-between py-4">
-            <a href="index.html" class="text-yellow-600 text-2xl font-bold">Centro Artesanal Calle Grande</a>
-            <div>
-                <ul class="hidden lg:flex space-x-4">
-                    <li><a href="index.html" class="hover:text-green-500">Home</a></li>
-                    <li><a href="acercade.html" class="hover:text-green-500">A cerca de</a></li>
-                    <li><a href="compras.html" class="hover:text-green-500">Compras</a></li>
-                    <li><a href="productos.html" class="hover:text-green-500">Productos</a></li>
-                    <li><a href="contacto.html" class="hover:text-green-500">Contacto</a></li>
-                </ul>
-            </div>
-            <div class="flex space-x-4">
-                <a href="#" class="hover:text-gray-700"><i class="fas fa-search"></i></a>
-                <a href="compras.html" class="hover:text-gray-700 relative">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span id="carrito-value"
-                        class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-2">0</span>
-                </a>
-                <a href="#" class="hover:text-gray-700"><i class="fas fa-user"></i></a>
-            </div>
-        </div>
-    </nav>
+    <div id="header"></div>
     <!-- Carrusel -->
     <div class="relative mx-4 my-8 rounded-lg shadow-lg bg-gray-100">
         <div class="carousel relative container mx-auto overflow-hidden rounded-lg " id="template-mo-zay-hero-carousel">
@@ -94,13 +64,17 @@
             <br>
             <br>
         </div>
-       
+        <!-- Controls -->
+        <button id="prev-slide"
+            class="absolute top-1/2 left-0 -translate-y-1/2 px-3 py-1 bg-gray-700 text-white">&lt;</button>
+        <button id="next-slide"
+            class="absolute top-1/2 right-0 -translate-y-1/2 px-3 py-1 bg-gray-700 text-white">&gt;</button>
     </div>
     <!-- Controls -->
     <button id="prev-slide"
-    class="absolute top-1/2 left-0 -translate-y-1/2 px-2 py-2 bg-gray-700 text-white rounded-full">&lt;</button>
+        class="absolute top-1/2 left-0 -translate-y-1/2 px-2 py-2 bg-gray-700 text-white rounded-full">&lt;</button>
     <button id="next-slide"
-    class="absolute top-1/2 right-0 -translate-y-1/2 px-2 py-2 bg-gray-700 text-white rounded-full">&gt;</button>
+        class="absolute top-1/2 right-0 -translate-y-1/2 px-2 py-2 bg-gray-700 text-white rounded-full">&gt;</button>
     <br>
     <!-- Categorías del Mes -->
     <section class="py-10">
@@ -129,26 +103,12 @@
             </div>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-white py-10">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
-            <div>
-                <h2 class="text-2xl font-bold text-green-500">Tienda Artesana Jaime Molina</h2>
-                <ul class="mt-4 space-y-2">
-                    <li><i class="fas fa-map-marker-alt"></i> Local principal - Valledupar - Colombia</li>
-                    <li><i class="fas fa-phone"></i> <a href="tel:057-320-202-02-02"
-                            class="hover:underline">057-320-202-02-02</a></li>
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:info@prodart.com"
-                            class="hover:underline">info@prodart.com</a></li>
-                </ul>
-            </div>
-            <!-- Additional Footer Links -->
-        </div>
-    </footer>
+    <div id="footer"></div>
     <script src="assets/js/carrusel.js"></script>
     <script src="assets/js/carrito.js"></script>
 
+
 </body>
+
 
 </html>
