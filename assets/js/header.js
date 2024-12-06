@@ -1,6 +1,5 @@
 function loadHeader()
 {
-    const repoName = '/WebEcommerce-TalentoTech'; // Cambia esto por el nombre exacto de tu repositorio
     const headerUrl = `assets/html/header.html`;
 
     fetch(headerUrl, { mode: 'cors' })

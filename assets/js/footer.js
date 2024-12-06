@@ -1,6 +1,6 @@
 function loadFooter()
 {
-    const repoName = '/WebEcommerce-TalentoTech'; // Cambia esto por el nombre exacto de tu repositorio
+   
     const footerUrl = `assets/html/footer.html`;
 
     fetch(footerUrl)
