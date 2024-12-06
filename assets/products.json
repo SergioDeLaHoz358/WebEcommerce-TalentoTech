@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "name": "Maceta de Barro Pintada",
         "category": "decoration",
         "price": 25000,
@@ -7,6 +8,7 @@
         "description": "Maceta artesanal de barro pintada a mano, ideal para plantas pequeñas."
     },
     {
+        "id": 2,
         "name": "Bolso de Yute Natural",
         "category": "accessories",
         "price": 50000,
@@ -14,6 +16,7 @@
         "description": "Bolso hecho a mano con yute natural, perfecto para el día a día."
     },
     {
+        "id": 3,
         "name": "Juego de Posavasos Tejidos",
         "category": "kitchen",
         "price": 20000,
@@ -21,6 +24,7 @@
         "description": "Conjunto de 4 posavasos tejidos a mano con materiales naturales."
     },
     {
+        "id": 3,
         "name": "Collar de Cuentas de Madera",
         "category": "jewelry",
         "price": 15000,
@@ -28,6 +32,7 @@
         "description": "Collar artesanal elaborado con cuentas de madera reciclada."
     },
     {
+        "id": 4,
         "name": "Tapiz de Lana Tejido a Mano",
         "category": "decoration",
         "price": 80000,
@@ -35,6 +40,7 @@
         "description": "Tapiz decorativo hecho a mano con lana natural y tintes orgánicos."
     },
     {
+        "id": 5,
         "name": "Pulsera de Hilo Trenzado",
         "category": "jewelry",
         "price": 10000,
@@ -42,6 +48,7 @@
         "description": "Pulsera hecha a mano con hilos de colores, ajustable."
     },
     {
+        "id": 6,
         "name": "Cesta de Mimbre Grande",
         "category": "storage",
         "price": 60000,
@@ -49,6 +56,7 @@
         "description": "Cesta artesanal de mimbre para almacenamiento o decoración."
     },
     {
+        "id": 7,
         "name": "Figura Decorativa en Cerámica",
         "category": "decoration",
         "price": 45000,
@@ -56,6 +64,7 @@
         "description": "Figura decorativa hecha a mano en cerámica con diseños únicos."
     },
     {
+        "id": 8,
         "name": "Tabla de Corte en Madera",
         "category": "kitchen",
         "price": 35000,
@@ -63,6 +72,7 @@
         "description": "Tabla de madera artesanal para cocina, duradera y ecológica."
     },
     {
+        "id": 9,
         "name": "Aretes de Tagua",
         "category": "jewelry",
         "price": 20000,
@@ -70,6 +80,7 @@
         "description": "Aretes hechos a mano con tagua, también conocida como marfil vegetal."
     },
     {
+        "id": 10,
         "name": "Almohadón Bordado a Mano",
         "category": "decoration",
         "price": 70000,
@@ -77,6 +88,7 @@
         "description": "Almohadón decorativo con bordado artesanal, ideal para sofás o camas."
     },
     {
+        "id": 11,
         "name": "Juego de Tazas de Barro",
         "category": "kitchen",
         "price": 50000,
@@ -84,6 +96,7 @@
         "description": "Conjunto de 2 tazas hechas a mano en barro cocido, con diseño rústico."
     },
     {
+        "id": 12,
         "name": "Sombrero de Palma",
         "category": "accessories",
         "price": 45000,
@@ -91,6 +104,7 @@
         "description": "Sombrero artesanal tejido con palma natural, perfecto para el sol."
     },
     {
+        "id": 13,
         "name": "Llaveros de Cuero Grabados",
         "category": "accessories",
         "price": 15000,
@@ -98,6 +112,7 @@
         "description": "Llaveros personalizados hechos a mano en cuero, con diseños únicos."
     },
     {
+        "id": 14,
         "name": "Mantel Bordado a Mano",
         "category": "kitchen",
         "price": 65000,
@@ -105,6 +120,7 @@
         "description": "Mantel artesanal bordado a mano con motivos florales."
     },
     {
+        "id": 15,
         "name": "Caja Decorativa de Bambú",
         "category": "decoration",
         "price": 30000,
@@ -112,6 +128,7 @@
         "description": "Caja hecha a mano en bambú, ideal para guardar pequeños objetos."
     },
     {
+        "id": 16,
         "name": "Colgante de Pared Macramé",
         "category": "decoration",
         "price": 55000,
@@ -119,6 +136,7 @@
         "description": "Colgante de pared hecho a mano en macramé, perfecto para decorar cualquier espacio."
     },
     {
+        "id": 17,
         "name": "Cartera de Fibras Naturales",
         "category": "accessories",
         "price": 60000,
@@ -126,6 +144,7 @@
         "description": "Cartera artesanal tejida con fibras naturales, resistente y elegante."
     },
     {
+        "id": 18,
         "name": "Vaso de Vidrio Reciclado",
         "category": "kitchen",
         "price": 12000,
@@ -133,6 +152,7 @@
         "description": "Vaso hecho a mano utilizando vidrio reciclado, con diseño único."
     },
     {
+        "id": 19,
         "name": "Juego de Servilletas Tejidas",
         "category": "kitchen",
         "price": 30000,

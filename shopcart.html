@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carrito de Compras - Tienda Artesanal Jaime Molina">
+    <title>Carrito de Compras</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {},
+            },
+        };
+    </script>
+</head>
+
+<body>
+    <div class="container mx-auto py-10">
+        <h1 class="text-3xl font-bold text-center mb-10">Tu Carrito</h1>
+        <div id="carrito-container" class="grid grid-cols-1 gap-4">
+            <!-- Aquí se insertarán los productos dinámicamente -->
+        </div>
+        <div class="mt-10 flex justify-between items-center">
+            <p id="total-price" class="text-2xl font-bold">Total: $0</p>
+            <button id="pagar-btn"
+                class="bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600 font-bold">Pagar</button>
+        </div>
+    </div>
+    <script src="assets/js/shopcart.js"></script>
+</body>
+
+</html>
