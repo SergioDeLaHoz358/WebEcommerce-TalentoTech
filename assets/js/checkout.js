@@ -14,7 +14,7 @@ const item = JSON.parse(localStorage.getItem('item')) || null;
 if (carrito.length == 0 && item == null)
 {
     alert("El carrito está vacío o no se encontró el producto individual. Redirigiendo a la página de productos...");
-    window.location.href = 'productos.html';
+    window.location.href = 'products.html';
 } else
 {
     if (carrito.length > 0)
@@ -179,7 +179,7 @@ checkoutForm.addEventListener('submit', event =>
         {
             localStorage.removeItem('carrito');
             localStorage.removeItem('item');
-            window.location.href = 'productos.html'; // Redirigir a productos
+            window.location.href = 'products.html';
         }, 3000);
     }, 2000);
 });
