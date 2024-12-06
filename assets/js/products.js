@@ -117,3 +117,5 @@ fetch('assets/products.json')
         console.error('Error:', error);
         productosContainer.innerHTML = '<p class="text-red-500">No se pudieron cargar los productos. Intenta nuevamente más tarde.</p>';
     });
+
+    
