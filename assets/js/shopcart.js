@@ -8,29 +8,36 @@ const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 // Cargar productos desde el archivo JSON
 fetch('assets/products.json')
-    .then(response => {
-        if (!response.ok) {
+    .then(response =>
+    {
+        if (!response.ok)
+        {
             throw new Error('Error al cargar el archivo JSON');
         }
         return response.json();
     })
-    .then(productos => {
+    .then(productos =>
+    {
         const productosCarrito = procesarCarrito(carrito, productos);
         renderizarCarrito(productosCarrito);
     })
-    .catch(error => {
+    .catch(error =>
+    {
         console.error('Error:', error);
         carritoContainer.innerHTML = '<p class="text-red-500">No se pudieron cargar los productos. Intenta nuevamente más tarde.</p>';
     });
 
 // Procesar carrito: agrupar por id y calcular cantidades
-function procesarCarrito(carrito, productos) {
-    const cantidades = carrito.reduce((acc, id) => {
+function procesarCarrito(carrito, productos)
+{
+    const cantidades = carrito.reduce((acc, id) =>
+    {
         acc[id] = (acc[id] || 0) + 1;
         return acc;
     }, {});
 
-    return Object.keys(cantidades).map(id => {
+    return Object.keys(cantidades).map(id =>
+    {
         const producto = productos.find(p => p.id === parseInt(id));
         return {
             ...producto,
@@ -40,11 +47,13 @@ function procesarCarrito(carrito, productos) {
 }
 
 // Renderizar los productos del carrito
-function renderizarCarrito(productosCarrito) {
+function renderizarCarrito(productosCarrito)
+{
     carritoContainer.innerHTML = '';
     let total = 0;
 
-    productosCarrito.forEach(producto => {
+    productosCarrito.forEach(producto =>
+    {
         const subtotal = producto.price * producto.cantidad;
         total += subtotal;
 
@@ -71,9 +80,12 @@ function renderizarCarrito(productosCarrito) {
 }
 
 // Agregar eventos a los botones de eliminar
-function agregarEventosEliminar() {
-    document.querySelectorAll('.eliminar-btn').forEach(boton => {
-        boton.addEventListener('click', (e) => {
+function agregarEventosEliminar()
+{
+    document.querySelectorAll('.eliminar-btn').forEach(boton =>
+    {
+        boton.addEventListener('click', (e) =>
+        {
             const idProducto = parseInt(e.target.dataset.id);
             eliminarProductoDelCarrito(idProducto);
         });
@@ -81,9 +93,11 @@ function agregarEventosEliminar() {
 }
 
 // Eliminar producto del carrito
-function eliminarProductoDelCarrito(idProducto) {
+function eliminarProductoDelCarrito(idProducto)
+{
     const index = carrito.indexOf(idProducto);
-    if (index !== -1) {
+    if (index !== -1)
+    {
         carrito.splice(index, 1);
         localStorage.setItem('carrito', JSON.stringify(carrito));
         location.reload(); // Recargar la página para actualizar el carrito
@@ -91,12 +105,15 @@ function eliminarProductoDelCarrito(idProducto) {
 }
 
 // Evento del botón Pagar
-pagarBtn.addEventListener('click', () => {
-    if (carrito.length === 0) {
+pagarBtn.addEventListener('click', () =>
+{
+    if (carrito.length === 0)
+    {
         alert('Tu carrito está vacío. Agrega productos antes de pagar.');
-    } else {
+    } else
+    {
         alert('¡Gracias por tu compra! Serás redirigido a la página de pago.');
-        localStorage.removeItem('carrito'); // Limpiar carrito
+        localStorage.removeItem('item');
         location.href = 'checkout.html'; // Redirigir a checkout
     }
 });

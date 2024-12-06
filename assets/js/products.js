@@ -77,8 +77,9 @@ function agregarProductoAlCarrito(idProducto, cantidad)
 // Función para redirigir a checkout con el producto
 function redirigirACheckout(idProducto)
 {
-    const productoSeleccionado = { id: idProducto };
-    localStorage.setItem('productoCheckout', JSON.stringify(productoSeleccionado));
+    const productoSeleccionado = idProducto;
+    localStorage.setItem('item', JSON.stringify(productoSeleccionado));
+    localStorage.removeItem('carrito');
     window.location.href = 'checkout.html';
 }
 
@@ -87,6 +88,7 @@ function guardarCarritoEnLocalStorage()
 {
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
+
 
 // Función para actualizar el contador del carrito
 function actualizarContadorCarrito()
