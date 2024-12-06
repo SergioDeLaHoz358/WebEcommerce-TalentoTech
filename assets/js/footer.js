@@ -8,11 +8,11 @@ function loadHeader() {
             return response.text();
         })
         .then(data => {
-            const headerElement = document.getElementById('header');
+            const headerElement = document.getElementById('footer');
             if (headerElement) {
                 headerElement.innerHTML = data;
             } else {
-                console.error("Error: Element with ID 'header' not found.");
+                console.error("Error: Element with ID 'footer' not found.");
             }
         })
         .catch(error => console.error('Error loading footer:', error));
