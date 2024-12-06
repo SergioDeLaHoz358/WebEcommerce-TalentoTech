@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Haz crecer tu negocio a tu manera con ProdArt">
-    <title>Tienda Artesanal Jaime Molina</title>
+    <title>Centro Artesal Calle Grande</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -27,38 +28,41 @@
     </script>
 </head>
 
+
 <body>
     <div id="header"></div>
     <!-- Carrusel -->
-    <div class="relative">
-        <div class="carousel relative container mx-auto overflow-hidden" id="template-mo-zay-hero-carousel">
+    <div class="relative mx-4 my-8 rounded-lg shadow-lg">
+        <div class="carousel relative container mx-auto overflow-hidden rounded-lg" id="template-mo-zay-hero-carousel">
             <!-- Slide 1 -->
-            <div class="carousel-item active flex items-center justify-center bg-gray-100 h-96">
-                <img src="assets/img/category_img_01.jpg" class="w-1/3">
+            <div class="carousel-item active flex items-center justify-center w-full bg-gray-100 h-[28rem]">
+                <img src="assets/img/carrusel3.jpg" class="w-1/3 rounded-lg">
                 <div class="text-left ml-10">
-                    <h1 class="text-green-500 text-3xl font-bold">Tienda Artesana Jaime Molina</h1>
-                    <h3 class="text-xl">La tienda de Productos Artesanales...</h3>
-                    <p>En Jaime Molina, somos un equipo apasionado por la artesanía y la cultura local.</p>
+                    <h1 class="text-yellow-600 text-3xl font-bold">Centro Artesal Calle Grande</h1>
+                    <h3 class="text-xl m-2">La tienda de Productos Artesanales...</h3>
+                    <p class="m-2">En Calle Grande, somos un equipo apasionado por la artesanía y la cultura local.</p>
                 </div>
             </div>
             <!-- Slide 2 -->
-            <div class="carousel-item flex items-center justify-center bg-gray-100 h-96 hidden">
-                <img src="assets/img/category_img_02.jpg" class="w-1/3">
+            <div class="carousel-item flex items-center justify-center bg-gray-100 h-[28rem] hidden">
+                <img src="assets/img/carrusel2.jpg" class="w-1/3 rounded-lg">
                 <div class="text-left ml-10">
-                    <h1 class="text-green-500 text-3xl font-bold">Hecho a Mano</h1>
+                    <h1 class="text-yellow-600 text-3xl font-bold">Hecho a Mano</h1>
                     <h3 class="text-xl">Con amor y dedicación...</h3>
                     <p>Descubre productos únicos, hechos a mano por artesanos expertos.</p>
                 </div>
             </div>
             <!-- Slide 3 -->
-            <div class="carousel-item flex items-center justify-center bg-gray-100 h-96 hidden">
-                <img src="assets/img/category_img_03.jpg" class="w-1/3">
+            <div class="carousel-item flex items-center justify-center bg-gray-100 h-[28rem] hidden">
+                <img src="assets/img/carrusel1.jpg" class="w-1/3 rounded-lg">
                 <div class="text-left ml-10">
-                    <h1 class="text-green-500 text-3xl font-bold">Apoya Local</h1>
+                    <h1 class="text-yellow-600 text-3xl font-bold">Apoya Local</h1>
                     <h3 class="text-xl">Compras que hacen la diferencia...</h3>
                     <p>Al comprar en Jaime Molina, apoyas a las comunidades locales y su desarrollo.</p>
                 </div>
             </div>
+            <br>
+            <br>
         </div>
         <!-- Controls -->
         <button id="prev-slide"
@@ -66,7 +70,12 @@
         <button id="next-slide"
             class="absolute top-1/2 right-0 -translate-y-1/2 px-3 py-1 bg-gray-700 text-white">&gt;</button>
     </div>
-
+    <!-- Controls -->
+    <button id="prev-slide"
+        class="absolute top-1/2 left-0 -translate-y-1/2 px-2 py-2 bg-gray-700 text-white rounded-full">&lt;</button>
+    <button id="next-slide"
+        class="absolute top-1/2 right-0 -translate-y-1/2 px-2 py-2 bg-gray-700 text-white rounded-full">&gt;</button>
+    <br>
     <!-- Categorías del Mes -->
     <section class="py-10">
         <div class="container mx-auto text-center">
@@ -95,6 +104,8 @@
     <script src="assets/js/carrusel.js"></script>
     <script src="assets/js/carrito.js"></script>
 
+
 </body>
+
 
 </html>
