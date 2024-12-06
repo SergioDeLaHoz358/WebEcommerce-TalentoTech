@@ -1,4 +1,4 @@
-function loadHeader() {
+function loadFooter() {
     const baseUrl = window.location.origin + window.location.pathname.replace(/\/$/, '');
     fetch(`${baseUrl}/assets/html/footer.html`)
         .then(response => {
