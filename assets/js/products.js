@@ -9,9 +9,11 @@ actualizarContadorCarrito();
 const searchInput = document.getElementById('search-input');
 
 // Función para generar tarjetas de productos
-function generarTarjetas(productos) {
+function generarTarjetas(productos)
+{
     productosContainer.innerHTML = ''; // Limpiar el contenedor antes de agregar productos
-    productos.forEach(producto => {
+    productos.forEach(producto =>
+    {
         const card = document.createElement('div');
         card.className = 'bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center';
 
@@ -30,15 +32,19 @@ function generarTarjetas(productos) {
     });
 
     // Agregar eventos a los botones
-    document.querySelectorAll('.agregar-carrito-btn').forEach(boton => {
-        boton.addEventListener('click', (e) => {
+    document.querySelectorAll('.agregar-carrito-btn').forEach(boton =>
+    {
+        boton.addEventListener('click', (e) =>
+        {
             const idProducto = parseInt(e.target.dataset.id);
             mostrarVentanaCantidad(idProducto);
         });
     });
 
-    document.querySelectorAll('.comprar-btn').forEach(boton => {
-        boton.addEventListener('click', (e) => {
+    document.querySelectorAll('.comprar-btn').forEach(boton =>
+    {
+        boton.addEventListener('click', (e) =>
+        {
             const idProducto = parseInt(e.target.dataset.id);
             redirigirACheckout(idProducto);
         });
@@ -46,20 +52,25 @@ function generarTarjetas(productos) {
 }
 
 // Función para mostrar ventana emergente de cantidad
-function mostrarVentanaCantidad(idProducto) {
+function mostrarVentanaCantidad(idProducto)
+{
     const cantidad = parseInt(prompt('¿Cuántas unidades deseas agregar al carrito?', '1'), 10);
 
-    if (!isNaN(cantidad) && cantidad > 0) {
+    if (!isNaN(cantidad) && cantidad > 0)
+    {
         agregarProductoAlCarrito(idProducto, cantidad);
         alert(`¡Tu producto fue agregado al carrito con éxito!`);
-    } else {
+    } else
+    {
         alert('Por favor, ingresa un número válido de unidades.');
     }
 }
 
 // Función para agregar producto al carrito
-function agregarProductoAlCarrito(idProducto, cantidad) {
-    for (let i = 0; i < cantidad; i++) {
+function agregarProductoAlCarrito(idProducto, cantidad)
+{
+    for (let i = 0; i < cantidad; i++)
+    {
         carrito.push(idProducto);
     }
     guardarCarritoEnLocalStorage();
@@ -76,21 +87,25 @@ function redirigirACheckout(idProducto)
 }
 
 // Función para guardar carrito en localStorage
-function guardarCarritoEnLocalStorage() {
+function guardarCarritoEnLocalStorage()
+{
     localStorage.setItem('carrito', JSON.stringify(carrito));
 }
 
 
 // Función para actualizar el contador del carrito
-function actualizarContadorCarrito() {
+function actualizarContadorCarrito()
+{
     const contadorCarrito = document.getElementById('carrito-value');
-    if (contadorCarrito) {
+    if (contadorCarrito)
+    {
         contadorCarrito.textContent = carrito.length;
     }
 }
 
 // Función para filtrar productos
-function filtrarProductos(productos, query) {
+function filtrarProductos(productos, query)
+{
     return productos.filter(producto =>
         producto.name.toLowerCase().includes(query.toLowerCase()) ||
         producto.description.toLowerCase().includes(query.toLowerCase())
@@ -99,23 +114,28 @@ function filtrarProductos(productos, query) {
 
 // Cargar productos desde el archivo JSON
 fetch('assets/products.json')
-    .then(response => {
-        if (!response.ok) {
+    .then(response =>
+    {
+        if (!response.ok)
+        {
             throw new Error('Error al cargar el archivo JSON');
         }
         return response.json();
     })
-    .then(productos => {
+    .then(productos =>
+    {
         generarTarjetas(productos);
 
         // Escuchar el evento input en el campo de búsqueda
-        searchInput.addEventListener('input', () => {
+        searchInput.addEventListener('input', () =>
+        {
             const query = searchInput.value.trim();
             const productosFiltrados = filtrarProductos(productos, query);
             generarTarjetas(productosFiltrados);
         });
     })
-    .catch(error => {
+    .catch(error =>
+    {
         console.error('Error:', error);
         productosContainer.innerHTML = '<p class="text-red-500">No se pudieron cargar los productos. Intenta nuevamente más tarde.</p>';
     });

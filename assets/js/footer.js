@@ -1,19 +1,25 @@
-function loadFooter() {
+function loadFooter()
+{
     const repoName = '/WebEcommerce-TalentoTech'; // Cambia esto por el nombre exacto de tu repositorio
-    const footerUrl = `${repoName}/assets/html/footer.html`;
+    const footerUrl = `assets/html/footer.html`;
 
     fetch(footerUrl)
-        .then(response => {
-            if (!response.ok) {
+        .then(response =>
+        {
+            if (!response.ok)
+            {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
             return response.text();
         })
-        .then(data => {
+        .then(data =>
+        {
             const footerElement = document.getElementById('footer');
-            if (footerElement) {
+            if (footerElement)
+            {
                 footerElement.innerHTML = data;
-            } else {
+            } else
+            {
                 console.error("Footer element not found.");
             }
         })
