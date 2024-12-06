@@ -11,7 +11,7 @@ function generarTarjetas(productos)
         card.className = 'bg-white shadow-md rounded-lg p-4 flex flex-col items-center text-center';
 
         card.innerHTML = `
-            <img src="${producto.image}" alt="${producto.name}" class="w-full h-48 object-cover rounded-md mb-4">
+            <img src="${producto.image}" alt="${producto.name}" class="w-full h-48 object-scale-down rounded-md mb-4">
             <h2 class="text-lg font-bold mb-2">${producto.name}</h2>
             <p class="text-gray-600 mb-4">${producto.description}</p>
             <p class="text-green-500 font-bold mb-4">$${producto.price.toLocaleString()}</p>
