@@ -1,10 +1,19 @@
-function loadHeader()
-{
-    fetch('/assets/html/header.html')
-        .then(response => response.text())
-        .then(data =>
-        {
-            document.getElementById('header').innerHTML = data;
+function loadHeader() {
+    const baseUrl = window.location.origin + window.location.pathname.replace(/\/$/, '');
+    fetch(`${baseUrl}/assets/html/header.html`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(data => {
+            const headerElement = document.getElementById('header');
+            if (headerElement) {
+                headerElement.innerHTML = data;
+            } else {
+                console.error("Error: Element with ID 'header' not found.");
+            }
         })
         .catch(error => console.error('Error loading header:', error));
 }
