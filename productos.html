@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Productos de la Tienda Artesanal Jaime Molina">
+    <title>Productos - Tienda Artesanal Jaime Molina</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {},
+            },
+        };
+    </script>
+
+    <script src="/assets/js/header.js" defer></script>
+    <script src="/assets/js/footer.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () =>
+        {
+            loadHeader();
+            loadFooter();
+        });
+    </script>
+</head>
+
+<body>
+    <div id="header"></div>
+
+    <!-- Contenedor de Productos -->
+    <main class="container mx-auto py-10">
+        <h1 class="text-3xl font-bold text-center mb-10">Nuestros Productos</h1>
+        <div id="productos-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Las tarjetas de productos se insertarán aquí dinámicamente -->
+        </div>
+    </main>
+
+
+    <div id="footer"></div>
+    <!-- Script JS -->
+    <script src="assets/js/products.js"></script>
+</body>
+
+</html>
