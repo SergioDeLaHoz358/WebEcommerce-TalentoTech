@@ -1,16 +1,23 @@
 function loadHeader() {
     const baseUrl = window.location.origin + window.location.pathname.replace(/\/$/, '');
-    fetch(`${baseUrl}/assets/html/header.html`)
+    console.log('Base URL:', baseUrl);
+    const headerUrl = `${baseUrl}/assets/html/header.html`;
+    console.log('Fetching header from:', headerUrl);
+
+    fetch(headerUrl)
         .then(response => {
+            console.log('Response:', response);
             if (!response.ok) {
                 throw new Error(`HTTP error! Status: ${response.status}`);
             }
             return response.text();
         })
         .then(data => {
-            const headerElement = document.getElementById('header');
+            console.log('Header content:', data);
+            const headerElement = document.getElementById('header');    
             if (headerElement) {
                 headerElement.innerHTML = data;
+                console.log('Header successfully loaded.');
             } else {
                 console.error("Error: Element with ID 'header' not found.");
             }
